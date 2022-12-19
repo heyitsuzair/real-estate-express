@@ -218,7 +218,7 @@ module.exports.recoverEmail = async (req, res) => {
 
         return res.status(200).json({
           error: false,
-          msg: "An Email With Link Has Been Sent To Your Provided Email",
+          msg: "Link Has Been Sent To Your Provided Email",
         });
       }
       /**
