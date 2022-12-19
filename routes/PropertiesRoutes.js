@@ -18,6 +18,9 @@ router.get("/get-properties/:page_no/:limit", getProperties);
 router.get("/get-seller-properties", fetchUser, getSellerProperties);
 router.put("/update-property/:id", fetchUser, updateProperty);
 router.get("/search-properties/:query/:limit/:pageNo", searchProperties);
-router.get("/filter-properties/:page_no/:limit", filterProperties);
+router.get(
+  "/filter-properties/:page_no/:limit/:area/:status/:type",
+  filterProperties
+);
 
 module.exports = router;

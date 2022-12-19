@@ -519,7 +519,7 @@ module.exports.filterProperties = async (req, res) => {
     /**
      * Incoming Status,Area,Type To Search
      */
-    const { status, area, type } = req.body;
+    const { status, area, type } = req.params;
 
     const options = {
       page: pageNo,
