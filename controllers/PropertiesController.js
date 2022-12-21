@@ -500,7 +500,7 @@ module.exports.searchProperties = async (req, res) => {
      * Search By Title
      */
     const toFind = {
-      title: { $regex: ".*" + query + ".*" },
+      title: { $regex: new RegExp("^" + query.toLowerCase(), "i") },
     };
 
     const foundProperties = await PropertiesModel.paginate(toFind, options);
